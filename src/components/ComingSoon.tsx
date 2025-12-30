@@ -21,7 +21,7 @@ export default function ComingSoonPage() {
         </div>
         
         {/* Main Text - LAUNCHING SOON (Bebas Neue - Impact style) */}
-        <h2 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white text-center mb-5 maken">
+        <h2 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white text-center mb-5 font-maken">
           LAUNCHING SOON
         </h2>
         
