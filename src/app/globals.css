@@ -8,8 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-maken: var(--font-maken);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,9 +20,10 @@
 
 @font-face {
   font-family: 'Maken';
-  src: url('/fonts/maken.otf') format('truetype');
+  src: url('/fonts/Maken.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 .font-maken {
