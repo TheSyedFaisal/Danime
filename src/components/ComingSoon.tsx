@@ -27,7 +27,7 @@ export default function ComingSoonPage() {
         
         {/* Subtitle - ART MEETS ANIME (Permanent Marker - Brush style) */}
         <p className=" w-text-base sm:text-lg lg:text-xl text-white  anime">
-          ART  MEETS ANIME
+          ANIME MEETS ART 
         </p>
       </div>
 
