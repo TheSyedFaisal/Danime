@@ -11,38 +11,15 @@
   --font-maken: var(--font-maken);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 @font-face {
-  font-family: 'Maken';
-  src: url('/fonts/Maken.otf') format('opentype');
-  font-weight: 800;
+  font-family: 'Glimor';
+  src: url('/fonts/glimor-bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-.font-maken {
-  font-family: 'Maken', sans-serif;
-}
 
-@font-face {
-  font-family: 'paradise';
-  src: url('/fonts/paradise.otf') format('opentype');
-  font-weight: 800; 
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AnimeBrush';
-  src: url('/fonts/Road_Rage.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 
 body {
@@ -51,10 +28,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.paradise {
-  font-family: 'paradise', sans-serif;
-}
-
-.anime{
-  font-family: 'AnimeBrush', sans-serif;
+.header-font {
+  font-family: 'Glimor', sans-serif;
 }

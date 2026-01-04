@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
 import "./globals.css";
-
-const makenFont = localFont({
-  // 'src' folder ke bahar 'public' tak pohnchnay ke liye
-  src: '../../public/fonts/Maken.otf', 
-  variable: '--font-maken',
-})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${makenFont.variable} antialiased`}
+        className={` antialiased`}
       >
         {children}
       </body>
