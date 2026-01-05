@@ -1,14 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-maken: var(--font-maken);
+  --secondary-color: #D93444
 }
 
 @font-face {
@@ -19,12 +12,31 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "rugen";
+  src: url('/fonts/RugenExpanded.ttf') format('truetype');
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-font {
   font-family: 'Glimor', sans-serif;
+}
+
+.page-font {
+  font-family: 'rugen', sans-serif;
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.hover\:secondary:hover {
+  color: var(--secondary-color);
+}
+
+.border-secondary{
+  border-color: var(--secondary-color);
 }
