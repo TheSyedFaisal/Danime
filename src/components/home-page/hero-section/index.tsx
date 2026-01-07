@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className=" mx-4 md:mx-8 mt-20">
+    <div className=" mx-4 md:mx-8 mt-10 md:mt-20">
       <div className="flex items-center justify-between md:px-6 lg:px-25">
         <div>
           <h2 className="text-black text-lg md:text-2xl lg:text-[35px] leading-[100%] page-font ml-1 lg:ml-2">
@@ -24,7 +24,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className=" bg-[#D93444] w-full max-w-[1801px] h-[350px] md:h-[460px] mx-auto mt-10 mb-2 rounded-2xl relative px-6 flex items-center">
+      <div className=" bg-[#D93444] w-full max-w-[1801px] h-[450px] md:h-[350px] md:h-[460px] mx-auto mt-10 mb-2 rounded-2xl relative px-6 flex flex-col md:flex-row justify-between items-center">
         {/* Left Background Image */}
         <div className="absolute left-0 top-5 pointer-events-none rounded-l-2xl h-full">
           <Image
@@ -48,28 +48,28 @@ const HeroSection = () => {
         </div>
 
         {/* TEXT (LEFT SIDE) */}
-        <div className="flex items-end justify-between w-full">
-          <div className="relative z-10 max-w-[350px] text-white space-y-3">
-            <div className="mb-28">
-              <h2 className="text-3xl font-bold page-font mb-3">
-              Lorem ipsum dolor sit amet
-            </h2>
-            <p className=" max-w-[285px]">
-              Ditch the mass-produced merch. We create 1-of-1, hand-painted
-              denim masterpieces that ensure your style is as unique as your
-              fandom.
-            </p>
+        <div className="flex items-end justify-between w-full mt-3 md:mt-0">
+          <div className="relative z-10  md:max-w-[350px] text-white space-y-3">
+            <div className=" md:mb-28">
+              <h2 className="text-xl md:text-3xl text-center md:text-left font-bold page-font mb-1.5 md:mb-3">
+                Lorem ipsum dolor sit amet
+              </h2>
+              <p className="text-xs md:text-lg text-center md:text-left md:max-w-[285px]">
+                Ditch the mass-produced merch. We create 1-of-1, hand-painted
+                denim masterpieces that ensure your style is as unique as your
+                fandom.
+              </p>
             </div>
 
             <div>
-              <button className="border px-4 py-2 page-font text-xs ">
+              <button className="border px-4 py-4 md:py-2 page-font text-xs w-full md:w-auto">
                 shop now{" "}
               </button>
             </div>
           </div>
 
           <div>
-            <div className="relative z-100 bg-[#F54F5F] rounded-xl p-3">
+            <div className="relative z-100 bg-[#F54F5F] rounded-xl p-3 hidden md:block">
             <div className="flex">
               <Image src="/user.png" alt="" height={30} width={30} />
               <Image src="/user.png" alt="" height={30} width={30} />
@@ -83,13 +83,13 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="md:absolute left-1/2 top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 sm:-translate-y-1/2 z-20">
           <Image
             src="/hero-imagee.png"
             width={400}
             height={400}
             alt="Hero Image"
-            className="drop-shadow-2xl md:mb-[153px]"
+            className="w-[160px] sm:w-[190px] md:w-[400px] drop-shadow-2xl relative sm:top-[145.8px] md:-top-19"
             priority
           />
         </div>
