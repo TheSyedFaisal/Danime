@@ -4,7 +4,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='relative z-0'>
+    <div className='relative z-0 '>
       <HeroSection />
     </div>
   )

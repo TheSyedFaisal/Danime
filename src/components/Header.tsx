@@ -15,7 +15,7 @@ const Header = () => {
 }, [menuOpen]);
   return (
     /* h-auto use kiya hai taake image jitni lambi ho, container khud adjust ho jaye */
-    <div className="w-full relative h-auto overflow-hidden bg-white">
+    <div className="w-full relative h-auto overflow-hidden bg-[#eaeaea]">
       {/* Background Image - fill ke bajaye responsive width use ki hai */}
       <Image
         src="/HeaderImg.png"

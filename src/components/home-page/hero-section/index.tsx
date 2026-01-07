@@ -24,7 +24,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className=" bg-[#D93444] w-full max-w-[1801px] h-[450px] md:h-[350px] md:h-[460px] mx-auto mt-10 mb-2 rounded-2xl relative px-6 flex flex-col md:flex-row justify-between items-center">
+      <div className=" bg-[#D93444] w-full max-w-[1801px] h-[450px] md:h-[460px] mx-auto mt-10 mb-2 rounded-2xl relative px-6 flex flex-col md:flex-row justify-between items-center">
         {/* Left Background Image */}
         <div className="absolute left-0 top-5 pointer-events-none rounded-l-2xl h-full">
           <Image
