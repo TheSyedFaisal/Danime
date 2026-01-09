@@ -18,7 +18,7 @@ const Header = () => {
     <div className="w-full relative h-auto overflow-hidden bg-[#eaeaea] container">
       {/* Background Image - fill ke bajaye responsive width use ki hai */}
       <Image
-        src="/HeaderImg.png"
+        src="/HeaderImage.png"
         width={1920}
         height={120}
         alt="Header Curve"
