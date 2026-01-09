@@ -15,7 +15,7 @@ const Header = () => {
 }, [menuOpen]);
   return (
     /* h-auto use kiya hai taake image jitni lambi ho, container khud adjust ho jaye */
-    <div className="w-full relative h-auto overflow-hidden bg-[#eaeaea]">
+    <div className="w-full relative h-auto overflow-hidden bg-[#eaeaea] container">
       {/* Background Image - fill ke bajaye responsive width use ki hai */}
       <Image
         src="/HeaderImg.png"
@@ -127,10 +127,9 @@ const Header = () => {
 
         {/* Mobile Icons */}
         <div className="flex gap-6 mt-10">
-          {["notification", "heart", "bag-2"].map((icon) => (
-            <div className="p-2 border border-secondary rounded-full cursor-pointer hover:bg-red-50 transition-all">
+          {["notification", "heart", "bag-2"].map((icon, idx) => (
+            <div key={icon} className="p-2 border border-secondary rounded-full cursor-pointer hover:bg-red-50 transition-all">
               <Image
-              key={icon}
               src={`/${icon}.svg`}
               width={20}
               height={20}

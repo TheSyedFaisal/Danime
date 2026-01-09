@@ -4,8 +4,8 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className=" mx-4 md:mx-8 mt-10 md:mt-20">
-      <div className="flex items-center justify-between md:px-6 lg:px-25">
+    <div className="px-4 md:px-8 pt-10 md:pt-20 container  ">
+      <div className="flex items-center justify-between md:px-6 lg:px-25 ">
         <div>
           <h2 className="text-black text-lg md:text-2xl lg:text-[35px] leading-[100%] page-font ml-1 lg:ml-2">
             Be the
