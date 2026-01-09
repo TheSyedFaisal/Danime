@@ -23,7 +23,7 @@ const CardSection = () => {
 
         {/* Heading */}
         <h2 className="page-font text-center text-white text-4xl pt-12">
-          NEW COLLECTION
+          NEW COLLECTION ITEM
         </h2>
 
         {/* MAIN GRID */}
