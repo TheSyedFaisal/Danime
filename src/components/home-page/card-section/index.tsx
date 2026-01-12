@@ -91,11 +91,11 @@ const CardSection = () => {
           </div>
 
           {/* RIGHT GRID */}
-          <div className="grid grid-cols-2 gap-6 h-full">
+          <div className="grid grid-cols-2 gap-3 md:gap-6 h-full">
             {[
               { title: "JACKETS", img: "/card-2.jpg" },
               { title: "TOTE BAGS", img: "/card-3.jpg" },
-              { title: "JEANS", img: "/card-4.png" },
+              { title: "JEANS", img: "/doll.png" },
               { title: "CROCHET DOL", img: "/card-5.jpg" },
             ].map((item) => (
               <div key={item.title} className="flex flex-col">
@@ -108,7 +108,7 @@ const CardSection = () => {
                     alt={item.title}
                     width={200}
                     height={150}
-                    className="w-full h-[210px] md:h-[270px] object-cover transition-transform duration-500 ease-out
+                    className="w-full h-[120px] sm:h-[220px] md:h-[270px] object-cover transition-transform duration-500 ease-out
                hover:scale-105 hover:shadow-xl"
                   />
                 </div>
