@@ -31,15 +31,17 @@ const Features = () => {
             src="/feature-vector2.svg"
             width={360}
             height={220}
-            alt=""
-            className="translate-y-10 -translate-x-30"
+            alt="Decorative vector left"
+            unoptimized={true}
+            className="w-45 h-28 sm:w-60 sm:h-35 md:w-90 md:h-55 translate-y-10 -translate-x-30"
           />
           <Image
             src="/feature-vector.svg"
             width={300}
             height={220}
-            alt=""
-            className=" "
+            alt="Decorative vector right"
+            unoptimized={true}
+            className="w-37.5 h-28 sm:w-50 sm:h-35 md:w-75 md:h-55"
           />
         </div>
 
@@ -51,7 +53,8 @@ const Features = () => {
             height={900}
             alt="Featured Models"
             priority
-            className="w-[400px] sm:w-[550px] md:w-[700px] lg:w-full h-[800px] object-contain lg:object-cover "
+            unoptimized={true}
+            className="w-[400px] sm:w-[550px] md:w-[700px] lg:w-full h-[400px] sm:h-[600px] md:h-[700px] lg:h-[800px] object-contain lg:object-cover "
           />
         </div>
       </div>
