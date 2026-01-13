@@ -127,7 +127,7 @@ const Header = () => {
 
         {/* Mobile Icons */}
         <div className="flex gap-6 mt-10">
-          {["notification", "heart", "bag-2"].map((icon) => (
+          {["notification", "heart", "bag-2"].map((icon, idx) => (
             <div key={icon} className="p-2 border border-secondary rounded-full cursor-pointer hover:bg-red-50 transition-all">
               <Image
               src={`/${icon}.svg`}

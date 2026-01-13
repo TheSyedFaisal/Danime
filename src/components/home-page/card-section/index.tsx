@@ -4,7 +4,7 @@ const CardSection = () => {
   return (
     <section className="px-4 md:px-6 container">
       <div
-        className=" mt-6 rounded lg:rounded-2xl relative overflow-hidden px-6 mb-10"
+        className=" mt-6 rounded lg:rounded-2xl relative overflow-hidden px-6 "
         style={{
           backgroundImage: "url('/Group-20.png')",
           backgroundSize: "cover",
