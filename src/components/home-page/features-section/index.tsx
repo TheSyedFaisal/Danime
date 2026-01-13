@@ -46,7 +46,7 @@ const Features = () => {
         {/* Main image */}
         <div className="relative z-10 top-30 lg:top-20 mb-40">
           <Image
-            src="/feature-image.png"
+            src="/feature-img.svg"
             width={900}
             height={900}
             alt="Featured Models"
