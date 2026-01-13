@@ -32,7 +32,6 @@ const Features = () => {
             width={360}
             height={220}
             alt=""
-            unoptimized={true}
             className="translate-y-10 -translate-x-30"
           />
           <Image
@@ -40,7 +39,6 @@ const Features = () => {
             width={300}
             height={220}
             alt=""
-            unoptimized={true}
             className=" "
           />
         </div>

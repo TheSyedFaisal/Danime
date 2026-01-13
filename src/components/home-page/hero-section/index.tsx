@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import vector from '../../../../public/vector-1.svg'
 
 const HeroSection = () => {
   return (
@@ -27,8 +28,8 @@ const HeroSection = () => {
         {/* Left Background Image */}
         <div className="absolute left-0 top-5 pointer-events-none rounded-l-2xl h-full hidden md:block">
           <Image
-            src="/vector-1.svg"
-            alt="Left Background"
+            src={vector}
+            alt="Left Backgro und"
             width={400}
             height={400}
             className="w-[180px] md:w-[280px] lg:w-[550px] h-auto"
@@ -42,6 +43,7 @@ const HeroSection = () => {
             alt="Right Background"
             width={500}
             height={500}
+            unoptimized={true}
             className="w-[250px] md:w-[450px] lg:w-[840px] h-auto"
           />
         </div>
