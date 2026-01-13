@@ -32,7 +32,6 @@ const Features = () => {
             width={360}
             height={220}
             alt=""
-            unoptimized
             className="translate-y-10 -translate-x-30"
           />
           <Image
@@ -40,7 +39,6 @@ const Features = () => {
             width={300}
             height={220}
             alt=""
-            unoptimized
             className=" "
           />
         </div>
@@ -53,7 +51,6 @@ const Features = () => {
             height={900}
             alt="Featured Models"
             priority
-            unoptimized
             className="w-[400px] sm:w-[550px] md:w-[700px] lg:w-full h-[800px] object-contain lg:object-cover "
           />
         </div>

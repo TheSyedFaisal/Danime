@@ -134,7 +134,6 @@ const Header = () => {
               width={20}
               height={20}
               alt={icon}
-              unoptimized
             />
             </div>
           ))}
