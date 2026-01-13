@@ -46,12 +46,12 @@ const Features = () => {
         {/* Main image */}
         <div className="relative z-10 top-30 lg:top-20 mb-40">
           <Image
-            src="/feature-image.png"
+            src="/feature-img.svg"
             width={900}
             height={900}
             alt="Featured Models"
             priority
-            className="w-[400px] sm:w-[550px] md:w-[700px] lg:w-full h-[800px] object-contain lg:object-cover"
+            className="w-[400px] sm:w-[550px] md:w-[700px] lg:w-full h-[800px] object-contain lg:object-cover "
           />
         </div>
       </div>
