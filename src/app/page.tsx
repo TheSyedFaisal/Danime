@@ -1,4 +1,3 @@
-import Header from '@/components/Header'
 import CardSection from '@/components/home-page/card-section'
 import Features from '@/components/home-page/features-section'
 import HeroSection from '@/components/home-page/hero-section'
