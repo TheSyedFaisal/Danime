@@ -43,7 +43,6 @@ const HeroSection = () => {
             alt="Right Background"
             width={500}
             height={500}
-            unoptimized={true}
             className="w-[250px] md:w-[450px] lg:w-[840px] h-auto"
           />
         </div>
