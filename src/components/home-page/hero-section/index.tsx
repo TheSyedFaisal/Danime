@@ -31,6 +31,7 @@ const HeroSection = () => {
             alt="Left Background"
             width={400}
             height={400}
+            unoptimized
             className="w-[180px] md:w-[280px] lg:w-[550px] h-auto"
           />
         </div>
@@ -42,6 +43,7 @@ const HeroSection = () => {
             alt="Right Background"
             width={500}
             height={500}
+            unoptimized
             className="w-[250px] md:w-[450px] lg:w-[840px] h-auto"
           />
         </div>
