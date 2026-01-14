@@ -10,7 +10,7 @@ const HeroSection = () => {
           <h2 className="text-black text-sm md:text-2xl lg:text-[35px] leading-[100%] page-font ml-1 lg:ml-2">
             Be the
           </h2>
-          <h1 className="secondary text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
+          <h1 className="text-[#D43642] text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
             only
           </h1>
         </div>
@@ -18,7 +18,7 @@ const HeroSection = () => {
           <h2 className="text-black text-sm md:text-2xl lg:text-[35px] leading-[100%] page-font">
             one in the
           </h2>
-          <h1 className="secondary text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
+          <h1 className="text-[#D43642] text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
             ROOM
           </h1>
         </div>

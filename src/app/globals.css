@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --secondary-color: #D93444
-}
-
 @font-face {
   font-family: 'Glimor';
   src: url('/fonts/glimor-bold.otf') format('opentype');
@@ -29,20 +25,22 @@ body {
   font-family: 'rugen', sans-serif;
 }
 
-.secondary {
-  color: var(--secondary-color);
-}
-
-.hover\:secondary:hover {
-  color: var(--secondary-color);
-}
-
-.border-secondary{
-  border-color: var(--secondary-color);
-}
-
 .container {
   margin: auto;
   max-width: 1280px;
 }
 
+@media (min-width: 450px) and (max-width: 640px) {
+  .custom-width {
+    max-width: clamp(460px, 40vw, 600px);
+  }
+
+  .custom {
+    max-width: clamp(260px, 36vw, 800px);
+  }
+
+  .small-padding{
+    padding-bottom: 90px;
+  }
+
+}

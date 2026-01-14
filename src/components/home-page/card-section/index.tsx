@@ -39,21 +39,50 @@ const CardSection = () => {
                 priority
               />
 
-              <Image
-                src="/card-1-img-2.png"
-                alt=""
-                width={240}
-                height={240}
-                className="absolute top-6 md:w-[300px] md:h-[300px] lg:w-[240px] lg:h-[240] right-0 lg:right-22 rotate-12 z-10"
-              />
-
-              <div className="absolute top-7 -right-1 z-20 w-[500px] h-[600px] hidden lg:block">
+              <div className="relative group w-full h-full">
+                {/* Card 1 image - top rotated */}
                 <Image
-                  src="/crop-image.png"
+                  src="/card-1-img-2.png"
                   alt=""
-                  fill
-                  className="object-contain "
+                  width={240}
+                  height={240}
+                  className="absolute top-6 md:w-[300px] md:h-[300px] lg:w-[240px] lg:h-[240px] right-0 lg:right-16 rotate-12 z-10
+                  transition-transform duration-700 ease-in-out 
+                  lg:group-hover:translate-x-22 "
                 />
+
+                {/* Card 1 image 3 - height increased */}
+                <div
+                  className="absolute -left-60 z-20 w-[500px] h-[680px] 
+                  transition-transform duration-700 ease-in-out
+                  group-hover:translate-x-26 hidden lg:block"
+                >
+                  <Image src="/card-1-img-3.png" alt="" fill className="" />
+                </div>
+
+                {/* Cardred image - fade in on hover */}
+                <div
+                  className="absolute inset-0 z-30 hidden lg:block
+                  opacity-0 group-hover:opacity-100
+                  transition-opacity duration-700 ease-in-out "
+                >
+                  <Image
+                    src="/cardred.png"
+                    alt=""
+                    fill
+                    className="object-cover pointer-events-none"
+                  />
+                </div>
+
+                {/* Rectangle for small screens - fade in on hover */}
+                <div className="absolute inset-0 z-30 lg:hidden">
+                  <Image
+                    src="/rectangel-2.png"
+                    alt=""
+                    fill
+                    className="pointer-events-none"
+                  />
+                </div>
               </div>
 
               <div className="absolute z-20 w-[350px] h-[500px] h-[500px] md:w-[700px] md:h-[670px] -bottom-30 md:-bottom-50 -left-30 lg:hidden">
@@ -64,19 +93,6 @@ const CardSection = () => {
                   className="object-contain"
                 />
               </div>
-
-              <Image
-                src="/cardred.png"
-                alt=""
-                fill
-                className="object-cover z-30 pointer-events-none hidden lg:block"
-              />  
-              <Image
-                src="/rectangel-2.png"
-                alt=""
-                fill
-                className=" z-30 pointer-events-none lg:hidden"
-              />
             </div>
 
             {/* LEFT TEXT */}
@@ -99,18 +115,30 @@ const CardSection = () => {
               { title: "CROCHET DOL", img: "/card-5.jpg" },
             ].map((item) => (
               <div key={item.title} className="flex flex-col">
-                <div
-                  className="bg-white rounded-2xl overflow-hidden
-               "
-                >
+                <div className="relative group bg-white rounded-2xl overflow-hidden">
+                  {/* Main card image */}
                   <Image
                     src={item.img}
                     alt={item.title}
                     width={200}
                     height={150}
-                    className="w-full h-[120px] sm:h-[220px] md:h-[270px] object-cover transition-transform duration-500 ease-out
-               hover:scale-105 hover:shadow-xl"
+                    className="w-full h-[120px] sm:h-[220px] md:h-[270px] object-cover
+               transition-transform duration-500 ease-out
+               hover:scale-120 hover:shadow-xl"
                   />
+
+                  {/* Cardred overlay image on hover */}
+                  <div
+                    className="absolute inset-0 z-30 opacity-0 group-hover:opacity-100
+               transition-opacity duration-700 ease-in-out pointer-events-none"
+                  >
+                    <Image
+                      src="/rectangel-2.png"
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
 
                 {/* RIGHT TEXT */}
