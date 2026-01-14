@@ -5,7 +5,7 @@ const Features = () => {
     <section className="relative bg-white overflow-hidden h-[320px] sm:h-[400px] md:h-[550px] lg:h-[700px] container">
       
       {/* Top bold FEATURED */}
-      <h1 className="page-font text-[13.1vw] sm:text-[12.7vw] leading-none lg:leading-33 text-black -ml-[11px]">
+      <h1 className="page-font text-[13.1vw] sm:text-[12.7vw]  leading-none lg:leading-33 text-black -ml-[11px]">
         FEATURED
       </h1>
 
@@ -14,7 +14,7 @@ const Features = () => {
         {[1, 2, 3].map((_, i) => (
           <h1
             key={i}
-            className="page-font text-[13.1vw] sm:text-[12.8vw] leading-none lg:leading-35 text-black/10 whitespace-nowrap"
+            className="page-font text-[13.1vw] sm:text-[12.8vw]  leading-none lg:leading-35 text-black/10 whitespace-nowrap"
           >
             FEATURED
           </h1>

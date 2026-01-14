@@ -1,16 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cedarville+Cursive&family=Meie+Script&family=Pacifico&display=swap");
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Glimor';
-  src: url('/fonts/glimor-bold.otf') format('opentype');
+  font-family: "Glimor";
+  src: url("/fonts/gilmer-bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
+  font-family: "glimor-heavy";
+  src: url("/fonts/Gilmer-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "rugen";
-  src: url('/fonts/RugenExpanded.ttf') format('truetype');
+  src: url("/fonts/RugenExpanded.ttf") format("truetype");
 }
 
 body {
@@ -18,11 +27,11 @@ body {
 }
 
 .header-font {
-  font-family: 'Glimor', sans-serif;
+  font-family: "Glimor", sans-serif;
 }
 
 .page-font {
-  font-family: 'rugen', sans-serif;
+  font-family: "rugen", sans-serif;
 }
 
 .container {
@@ -39,8 +48,31 @@ body {
     max-width: clamp(260px, 36vw, 800px);
   }
 
-  .small-padding{
+  .small-padding {
     padding-bottom: 90px;
   }
+}
 
+.clippath {
+  clip-path: polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%);
+  background-color: white;
+}
+
+.black-han {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gilmer-heavy{
+  font-family: "glimor-heavy", sans-serif;
+}
+
+.custom-shadow {
+  transition: transform 0.6s ease-in-out;
+}
+
+.group:hover .custom-shadow {
+  filter: drop-shadow(5 10px 20px rgba(0, 0, 0, 0.34));
+  transform: scale(1.05);
 }
