@@ -3,6 +3,7 @@ import React from "react";
 import vector from '../../../../public/vector-1.svg'
 
 const HeroSection = () => {
+  const user = [1,2,3]
   return (
     <div className="px-4 md:px-6 pt-8 md:pt-20 container  ">
       <div className="flex items-center justify-between px-3 sm:px-22 lg:px-25 ">
@@ -68,18 +69,17 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div>
+
             <div className="relative z-100 md:bg-[#F54F5F] rounded md:rounded-xl p-1 md:p-3 ">
             <div className="flex">
-              <Image src="/user.png" alt="" height={30} width={30} className="w-[10px] h-[10px] sm:w-[30px] sm:h-[30px]" />
-              <Image src="/user.png" alt="" height={30} width={30} className="w-[10px] h-[10px] sm:w-[30px] sm:h-[30px]" />
-              <Image src="/user.png" alt="" height={30} width={30} className="w-[10px] h-[10px] sm:w-[30px] sm:h-[30px]" />
+              {user.map((_,idx)=>(
+                <Image key={idx} src="/user.png" alt="" height={30} width={30} className="w-[10px] h-[10px] sm:w-[30px] sm:h-[30px]" />
+              ))}
             </div>
             <p className="max-w-[50px] sm:max-w-[150px] text-white mt-1 text-[4px] sm:text-xs">
               Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu
               blandit laoreet.{" "}
             </p>
-          </div>
           </div>
         </div>
 

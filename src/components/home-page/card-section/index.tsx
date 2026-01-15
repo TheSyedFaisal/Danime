@@ -1,3 +1,4 @@
+import ShopNowButton from "@/components/ui/Button";
 import Image from "next/image";
 
 const CardSection = () => {
@@ -102,9 +103,7 @@ const CardSection = () => {
               <h4 className="page-font text-white text-sm md:text-lg tracking-wide">
                 CREATE CUSTOM
               </h4>
-              <button className="mt-2 page-font hover:bg-foreground text-white text-[8px] md:text-xs border border-white px-4 py-2 rounded-lg cursor-pointer">
-                SHOP NOW
-              </button>
+              <ShopNowButton>shop now</ShopNowButton>
             </div>
           </div>
 
@@ -148,9 +147,7 @@ const CardSection = () => {
                   <h4 className="page-font text-white text-sm md:text-lg tracking-wide">
                     {item.title}
                   </h4>
-                  <button className="mt-2 page-font hover:bg-foreground cursor-pointer text-white text-[8px] md:text-xs border border-white px-3 py-2 rounded-md">
-                    SHOP NOW
-                  </button>
+                  <ShopNowButton>shop now</ShopNowButton>
                 </div>
               </div>
             ))}

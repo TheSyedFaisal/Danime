@@ -3,20 +3,19 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import IconButton from "./ui/IconButton";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
-  if (menuOpen) {
-    document.body.style.overflow = "hidden"; // scroll disable
-  } else {
-    document.body.style.overflow = "auto"; // scroll enable
-  }
-}, [menuOpen]);
+    if (menuOpen) {
+      document.body.style.overflow = "hidden"; 
+    } else {
+      document.body.style.overflow = "auto"; 
+    }
+  }, [menuOpen]);
   return (
-    /* h-auto use kiya hai taake image jitni lambi ho, container khud adjust ho jaye */
     <div className="w-full relative h-auto overflow-hidden bg-[#eaeaea] container">
-      {/* Background Image - fill ke bajaye responsive width use ki hai */}
       <Image
         src="/HeaderImage.png"
         width={1920}
@@ -26,9 +25,7 @@ const Header = () => {
         priority
       />
 
-      {/* Navigation Container - content ko image ke bottom par align kiya hai */}
       <nav className="absolute inset-x-0 bottom-0 z-10 flex items-end justify-center md:justify-between px-4 lg:px-8">
-        {/* 1. Logo (Left) */}
         <div className="flex-shrink-0 mb-4 md:mb-0 ">
           <Image
             src="/Logo.png"
@@ -39,52 +36,22 @@ const Header = () => {
           />
         </div>
 
-        {/* 2. Nav Links (Center) */}
-        <ul className="md:flex items-center gap-6 lg:gap-12 md:text-lg lg:text-xl text-white font-medium mb-3 lg:mb-5 hidden">
-          <li className="cursor-pointer hover:opacity-70 transition-all">
+        <ul className="md:flex items-center gap-1 lg:gap-4 md:text-lg lg:text-xl text-white font-medium mb-1.5 lg:mb-3 hidden">
+          <li className="cursor-pointer transition-all bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full">
             Home
           </li>
-          <li className="cursor-pointer hover:opacity-70 transition-all whitespace-nowrap">
+          <li className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all whitespace-nowrap">
             Design Custom
           </li>
-          <li className="cursor-pointer hover:opacity-70 transition-all">
+          <li className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
             Collections
           </li>
-          <li className="cursor-pointer hover:opacity-70 transition-all">
+          <li className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
             About
           </li>
         </ul>
 
-        {/* 3. Icons (Right) */}
-        <div className="flex items-center gap-1 sm:gap-3 absolute bottom-1 md:static right-2 flex md:mt-10">
-          <span className="p-1 sm:p-1.5 border border-foreground rounded-full cursor-pointer hover:bg-red-50 transition-all">
-            <Image
-              src="/notification.svg"
-              height={16}
-              width={16}
-              alt="notif"
-              className="w-[8px] h-[8px] sm:w-[14px] sm:h-[14px] lg:w-[16px] lg:h-[16px]"
-            />
-          </span>
-          <span className="p-1 sm:p-1.5 border border-foreground rounded-full cursor-pointer hover:bg-red-50 transition-all">
-            <Image
-              src="/heart.svg"
-              height={16}
-              width={16}
-              alt="wishlist"
-              className="w-[8px] h-[8px] sm:w-[14px] sm:h-[14px] lg:w-[16px] lg:h-[16px]"
-            />
-          </span>
-          <span className="p-1 sm:p-1.5 border border-foreground rounded-full cursor-pointer hover:bg-red-50 transition-all">
-            <Image
-              src="/bag-2.svg"
-              height={16}
-              width={16}
-              alt="cart"
-              className="w-[8px] h-[8px] sm:w-[14px] sm:h-[14px] lg:w-[16px] lg:h-[16px]"
-            />
-          </span>
-        </div>
+        <IconButton />
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-foreground text-2xl z-50 absolute left-4 cursor-pointer"
@@ -124,7 +91,6 @@ const Header = () => {
             About
           </li>
         </ul>
-
       </div>
     </div>
   );
