@@ -49,7 +49,7 @@ const Footer = () => {
   return (
     <div className="bg-[url('/footerImg.png')] bg-cover bg-center w-full ">
       <div className="bg-[#0B0B0B]/70 h-full px-4 md:px-10">
-        <div className="flex items-start justify-between text-white pt-10 pb-14">
+        <div className="flex items-start justify-between text-white pt-10 pb-6 md:pb-14">
           {footerLinks.map((item) => (
             <div key={item.id}>
               <h4 className="page-font text-[8px] sm:text-base md:text-xl lg:text-2xl">
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
 
         <hr className="text-foreground" />
-        <div className="text-center flex flex-col items-center text-white mt-12 pb-4">
+        <div className="text-center flex flex-col items-center text-white mt-8 md:mt-12 pb-4">
           <Image
             className="w-[280px] md:w-[500px] h-full"
             src="/Logo.png"
