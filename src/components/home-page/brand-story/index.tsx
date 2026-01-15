@@ -1,32 +1,9 @@
-// import Image from 'next/image'
-// import React from 'react'
-
-// const Brand = () => {
-//   return (
-//     <div className='bg-[#D43642] pl-4 md:pl-14 pt-10 min-h-screen flex w-[100%] relative overflow-hidden container'>
-//         <div className='flex justify-center'>
-//           <div className=' text-white'>
-//             <h3 className='text-base sm:text-3xl md:text-5xl page-font mb-3 md:mb-6'>Brand Story</h3>
-//             <p className='mb-1.5 md:mb-3 text-[5.5px] sm:text-xs md:text-base lg:text-xl max-w-[220px] sm:max-w-[410px] md:max-w-[610px] lg:max-w-[810px] leading-1.5 sm:leading-3 md:leading-6'>Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu blandit laoreet. Dictum eget est hac est. Facilisi odio neque at dis pulvinar lacus morbi. Volutpat eu elit est commodo at viverra consequat laoreet. Nascetur et sit amet enim vestibulum aliquam quis id arcu. Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu blandit laoreet. Dictum eget est hac est. Facilisi odio neque at dis pulvinar lacus morbi. Volutpat eu elit est commodo at viverra consequat laoreet. Nascetur et sit amet enim vestibulum aliquam quis id arcu. Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu blandit laoreet. Dictum eget est hac est. Facilisi odio neque at dis pulvinar lacus morbi. Volutpat eu elit est commodo at viverra consequat laoreet. Nascetur et sit amet enim vestibulum aliquam quis id arcu. </p>
-//             <p className='text-[5.5px] sm:text-xs md:text-base lg:text-xl max-w-[203px] sm:max-w-[340px] md:max-w-[540px] lg:max-w-[740px] leading-1.5 sm:leading-3 md:leading-6'>Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu blandit laoreet. Dictum eget est hac est. Facilisi odio neque at dis pulvinar lacus morbi. Volutpat eu elit est commodo at viverra consequat laoreet. Nascetur et sit amet enim vestibulum aliquam quis id arcu. Lorem ipsum dolor sit amet consectetur..</p>
-//         </div>
-
-//         <div className=' absolute right-0 top-10 w-[170px] h-[160px] sm:w-[350px] sm:h-[240px] md:w-[450px] md:h-[340px] lg:w-[520px] lg:h-[500px]'>
-//           <Image src='/new-logo.png' fill priority alt=''/>
-//         </div>
-//         </div>
-
-//     </div>
-//   )
-// }
-
-// export default Brand
 
 import Image from "next/image";
 
 const Brand = () => {
   return (
-    <section className="relative bg-[#D43642] overflow-hidden container">
+    <section className="relative bg-foreground overflow-hidden container">
       {/* FLEX WRAPPER */}
       <div
         className="

@@ -57,7 +57,7 @@ const Header = () => {
 
         {/* 3. Icons (Right) */}
         <div className="flex items-center gap-1 sm:gap-3 absolute bottom-1 md:static right-2 flex md:mt-10">
-          <span className="p-1 sm:p-1.5 border border-[#D43642] rounded-full cursor-pointer hover:bg-red-50 transition-all">
+          <span className="p-1 sm:p-1.5 border border-foreground rounded-full cursor-pointer hover:bg-red-50 transition-all">
             <Image
               src="/notification.svg"
               height={16}
@@ -66,7 +66,7 @@ const Header = () => {
               className="w-[8px] h-[8px] sm:w-[14px] sm:h-[14px] lg:w-[16px] lg:h-[16px]"
             />
           </span>
-          <span className="p-1 sm:p-1.5 border border-[#D43642] rounded-full cursor-pointer hover:bg-red-50 transition-all">
+          <span className="p-1 sm:p-1.5 border border-foreground rounded-full cursor-pointer hover:bg-red-50 transition-all">
             <Image
               src="/heart.svg"
               height={16}
@@ -75,7 +75,7 @@ const Header = () => {
               className="w-[8px] h-[8px] sm:w-[14px] sm:h-[14px] lg:w-[16px] lg:h-[16px]"
             />
           </span>
-          <span className="p-1 sm:p-1.5 border border-[#D43642] rounded-full cursor-pointer hover:bg-red-50 transition-all">
+          <span className="p-1 sm:p-1.5 border border-foreground rounded-full cursor-pointer hover:bg-red-50 transition-all">
             <Image
               src="/bag-2.svg"
               height={16}
@@ -87,7 +87,7 @@ const Header = () => {
         </div>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-[#D43642] text-2xl z-50 absolute left-4 cursor-pointer"
+          className="md:hidden text-foreground text-2xl z-50 absolute left-4 cursor-pointer"
         >
           {menuOpen ? <IoClose size={32} /> : <IoMdMenu size={32} />}
         </button>
@@ -100,25 +100,25 @@ const Header = () => {
       >
         <ul className="flex flex-col items-center gap-8 text-2xl font-semibold">
           <li
-            className="cursor-pointer hover:text-[#D43642] transition"
+            className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Home
           </li>
           <li
-            className="cursor-pointer hover:text-[#D43642] transition"
+            className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Design Custom
           </li>
           <li
-            className="cursor-pointer hover:text-[#D43642] transition"
+            className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Collections
           </li>
           <li
-            className="cursor-pointer hover:text-[#D43642] transition"
+            className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             About

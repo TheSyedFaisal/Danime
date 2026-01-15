@@ -10,7 +10,7 @@ const HeroSection = () => {
           <h2 className="text-black text-sm md:text-2xl lg:text-[35px] leading-[100%] page-font ml-1 lg:ml-2">
             Be the
           </h2>
-          <h1 className="text-[#D43642] text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
+          <h1 className="text-foreground text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
             only
           </h1>
         </div>
@@ -18,13 +18,13 @@ const HeroSection = () => {
           <h2 className="text-black text-sm md:text-2xl lg:text-[35px] leading-[100%] page-font">
             one in the
           </h2>
-          <h1 className="text-[#D43642] text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
+          <h1 className="text-foreground text-2xl md:text-6xl lg:text-[70px] leading-[70%] page-font">
             ROOM
           </h1>
         </div>
       </div>
 
-      <div className=" bg-[#D43642] w-full max-w-[1801px] h-[178px] sm:h-[260] md:h-[460px] mx-auto mt-5 md:mt-10 mb-2 rounded lg:rounded-2xl relative px-4 md:px-6 flex justify-between items-center">
+      <div className=" bg-foreground w-full max-w-[1801px] h-[178px] sm:h-[260] md:h-[460px] mx-auto mt-5 md:mt-10 mb-2 rounded lg:rounded-2xl relative px-4 md:px-6 flex justify-between items-center">
         {/* Left Background Image */}
         <div className="absolute left-0 top-5 pointer-events-none rounded-l-2xl h-full hidden md:block">
           <Image
@@ -62,7 +62,7 @@ const HeroSection = () => {
             </div>
 
             <div>
-              <button className="border px-2 md:px-4 py-1 md:py-2 lg:py-4 md:py-2 page-font text-[8px] md:text-xs w-auto">
+              <button className="border hover:bg-white hover:text-foreground transition  duration-300 ease-in-out hover:rounded-full cursor-pointer px-2 md:px-4 py-1 md:py-2 lg:py-4 md:py-2 page-font text-[8px] md:text-xs w-auto">
                 shop now{" "}
               </button>
             </div>

@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${makenFont.variable} antialiased bg-[#eaeaea]`}
+        className={`${makenFont.variable} antialiased bg-background`}
       >
         <Header />
         {children}

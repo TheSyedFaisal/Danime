@@ -41,23 +41,25 @@ const CardSection = () => {
 
               <div className="relative group w-full h-full">
                 {/* Card 1 image - top rotated */}
-                <Image
-                  src="/card-1-img-2.png"
-                  alt=""
-                  width={240}
-                  height={240}
-                  className="absolute top-6 md:w-[300px] md:h-[300px] lg:w-[240px] lg:h-[240px] right-0 lg:right-16 rotate-12 z-10
-                  transition-transform duration-700 ease-in-out 
-                  lg:group-hover:translate-x-22 "
-                />
+                <div className="group-hover:scale-110 transition-transform duration-2000 ease-in-out">
+                  <Image
+                    src="/card-1-img-2.png"
+                    alt=""
+                    width={240}
+                    height={240}
+                    className="absolute top-6 md:w-[300px] md:h-[300px] lg:w-[240px] lg:h-[240px] right-0 lg:right-16 rotate-12 z-10
+                  transition-transform duration-2000 ease-in-out 
+                  lg:group-hover:translate-x-30 "
+                  />
 
-                {/* Card 1 image 3 - height increased */}
-                <div
-                  className="absolute -left-60 z-20 w-[500px] h-[680px] 
-                  transition-transform duration-700 ease-in-out
-                  group-hover:translate-x-26 hidden lg:block"
-                >
-                  <Image src="/card-1-img-3.png" alt="" fill className="" />
+                  {/* Card 1 image 3 - height increased */}
+                  <div
+                    className="absolute -left-60 z-20 w-[500px] h-[680px] 
+                  transition-transform duration-2000 ease-in-out
+                  group-hover:translate-x-30 hidden lg:block "
+                  >
+                    <Image src="/card-1-img-3.png" alt="" fill className="" />
+                  </div>
                 </div>
 
                 {/* Cardred image - fade in on hover */}
@@ -100,7 +102,7 @@ const CardSection = () => {
               <h4 className="page-font text-white text-sm md:text-lg tracking-wide">
                 CREATE CUSTOM
               </h4>
-              <button className="mt-2 page-font text-white text-[8px] md:text-xs border border-white px-4 py-2 rounded-lg">
+              <button className="mt-2 page-font hover:bg-foreground text-white text-[8px] md:text-xs border border-white px-4 py-2 rounded-lg cursor-pointer">
                 SHOP NOW
               </button>
             </div>
@@ -123,7 +125,7 @@ const CardSection = () => {
                     width={200}
                     height={150}
                     className="w-full h-[120px] sm:h-[220px] md:h-[270px] object-cover
-               transition-transform duration-500 ease-out
+               transition-transform duration-1400 ease-in-out
                hover:scale-120 hover:shadow-xl"
                   />
 
@@ -142,11 +144,11 @@ const CardSection = () => {
                 </div>
 
                 {/* RIGHT TEXT */}
-                <div className="mt-3 text-center lg:text-left">
+                <div className="mt-2 text-center lg:text-left">
                   <h4 className="page-font text-white text-sm md:text-lg tracking-wide">
                     {item.title}
                   </h4>
-                  <button className="mt-2 page-font text-white text-[8px] md:text-xs border border-white px-3 py-1.5 rounded-md">
+                  <button className="mt-2 page-font hover:bg-foreground cursor-pointer text-white text-[8px] md:text-xs border border-white px-3 py-2 rounded-md">
                     SHOP NOW
                   </button>
                 </div>

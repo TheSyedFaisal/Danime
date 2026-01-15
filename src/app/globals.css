@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cedarville+Cursive&family=Meie+Script&family=Pacifico&display=swap");
 @import "tailwindcss";
 
+@theme {
+  --color-background: hsla(0, 0%, 92%);
+  --color-foreground: hsla(355, 65%, 52%, 1);
+  --color-primary: hsla(8, 65%, 55%, 1);
+  --color-muted: hsla(0, 0%, 0%, 0.6);
+  --color-footer: hsla(0, 0%, 0%, 0.25);
+}
+
 @font-face {
   font-family: "Glimor";
   src: url("/fonts/gilmer-bold.otf") format("opentype");
@@ -21,6 +29,8 @@
   font-family: "rugen";
   src: url("/fonts/RugenExpanded.ttf") format("truetype");
 }
+
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -64,7 +74,7 @@ body {
   font-style: normal;
 }
 
-.gilmer-heavy{
+.gilmer-heavy {
   font-family: "glimor-heavy", sans-serif;
 }
 
@@ -76,3 +86,32 @@ body {
   filter: drop-shadow(5 10px 20px rgba(0, 0, 0, 0.34));
   transform: scale(1.05);
 }
+
+/* @theme { */
+  /* 🎨 Colors */
+
+
+  /* 🔤 Font Families */
+  /* --font-app-primary: "Lora", "Merriweather", "Georgia", serif;
+  --font-app-secondary: "Playfair Display", serif; */
+
+  /* 🔠 Font Sizes */
+  /* --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem; */
+
+  /* ⭕ Radius */
+  /* --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px; */
+
+  /* 🌫 Shadows */
+  /* --shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.16); */
+/* } */
