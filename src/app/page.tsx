@@ -15,7 +15,6 @@ const Home = () => {
       <Features />
       <HotSellers />
       <Brand />
-      {/* <Footer /> */}
     </div>
   )
 }
