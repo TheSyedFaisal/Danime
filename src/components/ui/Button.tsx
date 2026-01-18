@@ -1,5 +1,5 @@
 // ShopNowButton.tsx
-import React, { ButtonHTMLAttributes, FC, ReactNode } from "react";
+import React, { ButtonHTMLAttributes, FC} from "react";
 
 interface ShopNowButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string;

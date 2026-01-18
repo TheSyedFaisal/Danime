@@ -1,6 +1,4 @@
 import Image from "next/image";
-import React from "react";
-import vector from '../../../../public/vector-1.svg'
 
 const HeroSection = () => {
   const user = [1,2,3]
@@ -29,7 +27,7 @@ const HeroSection = () => {
         {/* Left Background Image */}
         <div className="absolute left-0 top-5 pointer-events-none rounded-l-2xl h-full hidden md:block">
           <Image
-            src={vector}
+            src='/vector-1.svg'
             alt="Left Backgro und"
             width={400}
             height={400}

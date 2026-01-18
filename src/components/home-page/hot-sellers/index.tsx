@@ -1,42 +1,8 @@
+import { products } from "@/lib/constant";
 import Image from "next/image";
 import React from "react";
 
 const HotSellers = () => {
-  const products = [
-    {
-      id: 1,
-      category: "JACKETS",
-      name: "DENIM JACKET",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu blandit laoreet.",
-      price: "RS 1500",
-      image: "/jacket1.png",
-      colors: ["#1a1a2e", "#8b1a1a", "#f5f5f5"],
-      sizes: ["L", "M", "S"],
-    },
-    {
-      id: 2,
-      category: "JACKETS",
-      name: "DENIM JACKET",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu blandit laoreet.",
-      price: "RS 1500",
-      image: "/jacket1.png",
-      colors: ["#1a1a2e", "#8b1a1a", "#f5f5f5"],
-      sizes: ["L", "M", "S"],
-    },
-    {
-      id: 3,
-      category: "JACKETS",
-      name: "DENIM JACKET",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Tempor ut quam arcu blandit laoreet.",
-      price: "RS 1500",
-      image: "/jacket1.png",
-      colors: ["#1a1a2e", "#8b1a1a", "#f5f5f5"],
-      sizes: ["L", "M", "S"],
-    },
-  ];
 
   return (
     <div className="mt-12 mb-12">

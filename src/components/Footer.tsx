@@ -1,50 +1,9 @@
 "use client"
+import { footerLinks } from "@/lib/constant";
 import Image from "next/image";
 import { IoIosArrowRoundUp } from "react-icons/io";
 
 const Footer = () => {
-  const footerLinks = [
-    {
-      id: 1,
-        heading: "PRODUCTS",
-        links: [
-        { text: "All", href: "#" },
-        { text: "Jackets", href: "#" },
-        { text: "Jeans", href: "#" },
-        { text: "Bags", href: "#" },
-        { text: "Crochet Dolls", href: "#" },
-      ],
-    },
-    {
-      id: 2,
-      heading: "ABOUT",
-      links: [
-        { text: "About Us", href: "#" },
-        { text: "Contact Us", href: "#" },
-        { text: "Catalog", href: "#" },
-      ],
-    },
-    {
-      id: 3,
-      heading: "SUPPORT",
-      links: [
-        { text: "Account", href: "#" },
-        { text: "Payment Method", href: "#" },
-        { text: "Returns & Refunds", href: "#" },
-        { text: "Deliveries", href: "#" },
-        { text: "Terms & Condition", href: "#" },
-      ],
-    },
-    {
-      id: 4,
-      heading: "OUR SOCIALS",
-      links: [
-        { text: "Instagram", href: "#" },
-        { text: "X", href: "#" },
-        { text: "Facebook", href: "#" },
-      ],
-    },
-  ];
 
   return (
     <div className="bg-[url('/footerImg.png')] bg-cover bg-center w-full ">
