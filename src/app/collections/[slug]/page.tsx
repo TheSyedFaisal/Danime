@@ -24,7 +24,7 @@ const page = () => {
   }
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full container">
       <div className=" mt-10 px-10 mb-10">
         <div className=" ">
           <div className=" text-center">
