@@ -6,7 +6,7 @@ import { IoIosArrowRoundUp } from "react-icons/io";
 const Footer = () => {
 
   return (
-    <div className="bg-[url('/footerImg.png')] bg-cover bg-center w-full ">
+    <div className="bg-[url('/footerImg.png')] bg-cover bg-center w-full container">
       <div className="bg-[#0B0B0B]/70 h-full px-4 md:px-10">
         <div className="flex items-start justify-between text-white pt-10 pb-6 md:pb-14">
           {footerLinks.map((item) => (

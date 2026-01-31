@@ -27,23 +27,23 @@ const Header = () => {
       />
 
       <nav className="absolute inset-x-0 bottom-0 z-100 flex items-end justify-center md:justify-between px-4 lg:px-8">
-        <div className="flex-shrink-0 mb-4 md:mb-0 ">
+        <Link href={'/'} className="flex-shrink-0 mb-4 md:mb-0 ">
           <Image
             src="/Logo.png"
             height={40}
             width={120}
             alt="Danime Logo"
-            className="w-[130px] md:w-[100px] lg:w-[130px] h-auto object-contain"
+            className="w-[130px] md:w-[100px] lg:w-[150px] h-auto object-contain cursor-pointer"
           />
-        </div>
+        </Link>
 
         <ul className="md:flex items-center gap-1 lg:gap-4 md:text-lg lg:text-xl text-white font-medium mb-1.5 lg:mb-3 hidden">
           <li className="cursor-pointer transition-all bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full">
             Home
           </li>
-          <li className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all whitespace-nowrap">
+          <Link href={'/customs-design'} className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all whitespace-nowrap">
             Design Custom
-          </li>
+          </Link>
           <Link href='/collections' className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
             Collections
           </Link>

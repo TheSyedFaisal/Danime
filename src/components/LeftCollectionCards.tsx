@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import ShopNowButton from "./ui/Button";
+import Link from "next/link";
 
 const LeftCollectionCards = () => {
   return (
-    <div className="flex flex-col ">
+    <Link href={'/customs-design'} className="flex flex-col ">
       <div className="flex flex-col min-h-[350px] lg:min-h-[636px] rounded-2xl overflow-hidden bg-white relative">
         <Image
           src="/card-1-img-1.jpg"
@@ -79,7 +80,7 @@ const LeftCollectionCards = () => {
         </h4>
         <ShopNowButton>shop now</ShopNowButton>
       </div>
-    </div>
+    </Link>
   );
 };
 

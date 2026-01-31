@@ -5,7 +5,7 @@ import React from "react";
 const HotSellers = () => {
 
   return (
-    <div className="mt-12 mb-12">
+    <div className="pt-12 pb-12 container">
       <h2 className="text-center page-font text-2xl md:text-3xl lg:text-4xl">
         HOT SELLERS
       </h2>
