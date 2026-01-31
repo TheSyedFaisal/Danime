@@ -8,6 +8,7 @@
   --color-muted: hsla(0, 0%, 0%, 0.6);
   --color-footer: hsla(0, 0%, 0%, 0.25);
   --color-gainsboro: hsla(0, 0%, 86%, 1);
+  --color-placeholder: hsla(0, 0%, 55%, 1);
 }
 
 @font-face {
@@ -39,10 +40,20 @@
   src: url("/fonts/RugenExpanded.ttf") format("truetype");
 }
 
-
+@font-face {
+  font-family: "glimor-medium";
+  src: url("/fonts/Gilmer-Medium.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.glimor-medium{
+  font-family: "glimor-medium", sans-serif;
 }
 
 .header-font {
