@@ -22,7 +22,7 @@ const Header = () => {
         width={1920}
         height={120}
         alt="Header Curve"
-        className="w-full md:h-auto z-0 h-[60px]"
+        className="w-full md:h-auto z-0 h-[60px] "
         priority
       />
 

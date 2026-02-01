@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import { footerLinks } from "@/lib/constant";
 import Image from "next/image";
 import { IoIosArrowRoundUp } from "react-icons/io";
 
 const Footer = () => {
-
   return (
     <div className="bg-[url('/footerImg.png')] bg-cover bg-center w-full container">
       <div className="bg-[#0B0B0B]/70 h-full px-4 md:px-10">
@@ -14,12 +13,14 @@ const Footer = () => {
               <h4 className="page-font text-[8px] sm:text-base md:text-xl lg:text-2xl">
                 {item.heading}
               </h4>
-              <div className="mt-2.5 md:mt-5">
+              <div className="mt-2.5 md:mt-5 flex flex-col">
                 {item.links.map((links, idx) => (
                   <p
                     key={idx}
-                    className="leading-2 sm:leading-4 md:leading-6.5 cursor-pointer  
-                    text-[6px] sm:text-[10px] md:text-xl hover:underline hover:text-gray-300"
+                    className="relative inline-block w-fit cursor-pointer leading-2 sm:leading-4 md:leading-6.5
+                      text-[6px] sm:text-[10px] md:text-xl text-white/70 hover:text-gray-300 transition-colors duration-300
+                      after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 hover:after:w-full
+                      after:bg-current after:transition-all after:duration-500 after:ease-[cubic-bezier(0.65,0,0.35,1)]  "
                   >
                     {links.text}
                   </p>

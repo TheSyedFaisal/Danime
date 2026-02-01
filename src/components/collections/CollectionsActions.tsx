@@ -1,12 +1,15 @@
 import React from "react";
 import IconButton from "../ui/IconButton";
 import { HeartIcon } from "../ui/Icons";
+import Link from "next/link";
 
 interface CollectionsActionsProps {
   title: string;
+  collectionSlug: string;
+  productSlug: string;
 }
 
-const CollectionsActions: React.FC<CollectionsActionsProps> = ({title}) => {
+const CollectionsActions: React.FC<CollectionsActionsProps> = ({title, collectionSlug, productSlug}) => {
   return (
     <div className="flex items-center justify-center gap-4 md:justify-between ">
       <button className="mt-2 page-font cursor-pointer text-black text-[8px] md:text-xs border-2 border-black px-3 py-2 rounded-md hover:bg-foreground transition-all duration-300">
@@ -18,9 +21,9 @@ const CollectionsActions: React.FC<CollectionsActionsProps> = ({title}) => {
           <HeartIcon />
         </IconButton>
       </div>
-      <button className="mt-2 page-font cursor-pointer text-black text-[8px] md:text-xs border-2 border-black px-3 py-2 rounded-md hover:bg-foreground transition-all duration-300">
+      <Link href={`/collections/${collectionSlug}/${productSlug}`} className="mt-2 page-font cursor-pointer text-black text-[8px] md:text-xs border-2 border-black px-3 py-2 rounded-md hover:bg-foreground transition-all duration-300">
         shop now
-      </button>
+      </Link >
     </div>
   );
 };

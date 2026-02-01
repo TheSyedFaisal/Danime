@@ -23,6 +23,8 @@ const page = () => {
     );
   }
 
+  const activeProduct = collections.products[activeIndex];
+
   return (
     <div className="w-full h-full container">
       <div className=" mt-10 px-10 mb-10">
@@ -36,11 +38,11 @@ const page = () => {
             </h1>
           </div>
 
-          <div className="flex flex-col md:flex-row items-end gap-12 mt-10 mb-4">
-            <CollectionsContent products={collections.products} activeIndex={activeIndex} />
+          <div className="flex flex-col md:flex-row items-end gap-4 md:gap-12 mt-10 mb-4">
+            <CollectionsContent title={activeTitle?.title || ""} products={collections.products} activeIndex={activeIndex} />
             <CollectionImageSliders products={collections.products} slug={collections.slug} setActiveIndex={setActiveIndex} activeIndex={activeIndex} />
           </div>
-          <CollectionsActions title={activeTitle?.title || ""} />
+          <CollectionsActions collectionSlug={collections.slug} productSlug={activeProduct?.slug ?? ""} title={activeTitle?.title || ""} />
         </div>
       </div>
     </div>

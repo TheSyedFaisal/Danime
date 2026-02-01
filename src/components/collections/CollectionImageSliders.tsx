@@ -47,7 +47,7 @@ const CollectionImageSliders: React.FC<CollectionImageSlidersProps> = ({products
   const shadowBottom = slug === "jeans" ? "-1.75rem" : "-3.75rem";
 
   return (
-    <div className="relative h-45 sm:h-60 md:h-100 overflow-hidden w-[70%] ">
+    <div className="relative h-45 sm:h-60 md:h-80 lg:h-100 overflow-hidden w-[70%] ">
       {images.map((images, index) => {
         let state = "hidden";
 
