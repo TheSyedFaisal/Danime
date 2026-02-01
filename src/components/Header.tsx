@@ -38,18 +38,18 @@ const Header = () => {
         </Link>
 
         <ul className="md:flex items-center gap-1 lg:gap-4 md:text-lg lg:text-xl text-white font-medium mb-1.5 lg:mb-3 hidden">
-          <li className="cursor-pointer transition-all bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full">
+          <Link href={'/'} className="cursor-pointer transition-all bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full">
             Home
-          </li>
+          </Link>
           <Link href={'/customs-design'} className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all whitespace-nowrap">
             Design Custom
           </Link>
           <Link href='/collections' className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
             Collections
           </Link>
-          <li className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
+          <Link href={'/about'} className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
             About
-          </li>
+          </Link>
         </ul>
 
         <IconGroup />
@@ -67,30 +67,30 @@ const Header = () => {
         } md:hidden`}
       >
         <ul className="flex flex-col items-center gap-8 text-2xl font-semibold">
-          <li
+          <Link href={'/'}
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Home
-          </li>
-          <li
+          </Link >
+          <Link href={'/customs-design'}
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Design Custom
-          </li>
+          </Link>
           <Link href='/collections'
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Collections
           </Link>
-          <li
+          <Link href={'/about'}
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             About
-          </li>
+          </Link>
         </ul>
       </div>
     </div>
