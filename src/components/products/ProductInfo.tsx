@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Product } from "@/lib/constant";
+import { useCart } from "@/context/CartContext";
 
 interface ProductInfoProps {
   product: Product;
@@ -71,6 +72,9 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [qty, setQty] = useState(1);
   const [addedToCart, setAddedToCart] = useState(false);
+  const [sizeError, setSizeError] = useState(false);
+
+  const { addToCart } = useCart();
 
   const hasDiscount = !!product.discountPrice;
   const discountPercent = hasDiscount
@@ -82,6 +86,25 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   const formatPrice = (val: number) => `$${(val / 100).toFixed(2)}`;
 
   const handleAddToCart = () => {
+    // Validate size selection
+    if (!selectedSize) {
+      setSizeError(true);
+      setTimeout(() => setSizeError(false), 2000);
+      return;
+    }
+
+    // Add to cart
+    addToCart({
+      productId: product.id,
+      title: product.title,
+      price: product.price,
+      discountPrice: product.discountPrice,
+      size: selectedSize,
+      image: product.images[0], // Collection card image
+      slug: product.slug,
+    });
+
+    // Show success feedback
     setAddedToCart(true);
     setTimeout(() => setAddedToCart(false), 1800);
   };
@@ -125,13 +148,23 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
 
       {/* ── Size Selector ── */}
       <div className="mb-4 md:mb-7">
-        <p className="text-[16px] page-font uppercase mb-2.5">Select Size</p>
+        <p className="text-[16px] page-font uppercase mb-2.5">
+          Select Size
+          {sizeError && (
+            <span className="text-red-500 text-xs ml-2 gilmor-regular normal-case">
+              Please select a size
+            </span>
+          )}
+        </p>
         <div className="flex gap-3 flex-wrap">
           {product.sizes.map((size) => (
             <button
               key={size}
-              onClick={() => setSelectedSize(size)}
-              className={`gilmor-regular text-[11px] md:text-base transition-all duration-200 text-[13px] font-medium cursor-pointer ${selectedSize === size ? "text-foreground border-b" : "text-black"}`}
+              onClick={() => {
+                setSelectedSize(size);
+                setSizeError(false);
+              }}
+              className={`gilmor-regular text-[11px] md:text-base transition-all duration-200 text-[13px] font-medium cursor-pointer ${selectedSize === size ? "text-foreground border-b" : "text-black"} ${sizeError ? "text-red-500" : ""}`}
             >
               {size}
             </button>

@@ -12,6 +12,18 @@ export interface Product {
   videoUrl?: string;
 }
 
+export interface CartItem {
+  id: string; // unique identifier (productId-size)
+  productId: number;
+  title: string;
+  price: number;
+  discountPrice?: number;
+  size: string;
+  quantity: number;
+  image: string;
+  slug: string;
+}
+
 export interface Card {
   id: number;
   title: string;
@@ -44,7 +56,7 @@ export const cards: Card[] = [
           "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&h=800&fit=crop",
           "https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=600&h=800&fit=crop",
         ],
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       },
       {
         id: 2,

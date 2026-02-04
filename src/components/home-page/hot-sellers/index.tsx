@@ -1,9 +1,26 @@
+"use client";
+
 import { products } from "@/lib/constant";
 import Image from "next/image";
 import React from "react";
+import { useCart } from "@/context/CartContext";
 
 const HotSellers = () => {
+  const { addToCart } = useCart();
 
+  const handleAddToCart = (item: any) => {
+    // Use first available size as default
+    const defaultSize = item.sizes[0];
+
+    addToCart({
+      productId: item.id,
+      title: item.name,
+      price: parseInt(item.price.replace(/[^0-9]/g, "")) * 100, // Convert to cents
+      size: defaultSize,
+      image: item.image,
+      slug: `product-${item.id}`,
+    });
+  };
   return (
     <div className="pt-12 pb-12 container">
       <h2 className="text-center page-font text-2xl md:text-3xl lg:text-4xl">
@@ -95,7 +112,10 @@ const HotSellers = () => {
                 <span className="font-bold text-[6.1px] md:text-base gilmer-heavy text-[#F54F5F]">
                   {item.price}
                 </span>
-                <button className="text-[5.33px] md:text-sm text-left header-font font-medium text-foreground hover:underline">
+                <button
+                  onClick={() => handleAddToCart(item)}
+                  className="text-[5.33px] md:text-sm text-left header-font font-medium text-foreground hover:underline"
+                >
                   SHOP NOW
                 </button>
               </div>
