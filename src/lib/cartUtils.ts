@@ -1,3 +1,5 @@
+import { CartItem } from "./constant";
+
 export const formatPrice = (priceInCents: number): string => {
   return `$${(priceInCents / 100).toFixed(2)}`;
 };
@@ -12,7 +14,7 @@ export const generateCartItemId = (productId: number, size: string): string => {
 
 const CART_STORAGE_KEY = "danime_shopping_cart";
 
-export const loadCartFromStorage = (): any[] => {
+export const loadCartFromStorage = (): CartItem[] => {
   if (typeof window === "undefined") return [];
 
   try {
@@ -24,7 +26,7 @@ export const loadCartFromStorage = (): any[] => {
   }
 };
 
-export const saveCartToStorage = (cart: any[]): void => {
+export const saveCartToStorage = (cart: CartItem[]): void => {
   if (typeof window === "undefined") return;
 
   try {

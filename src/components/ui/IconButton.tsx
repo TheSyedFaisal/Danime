@@ -23,9 +23,11 @@ const IconButton = ({
         border border-foreground
         rounded-full
         transition-all
-        ${disabled
-          ? "cursor-default opacity-40"
-          : "cursor-pointer hover:bg-foreground hover:scale-95"}
+        ${
+          disabled
+            ? "cursor-default opacity-40"
+            : "cursor-pointer hover:bg-foreground hover:scale-95"
+        }
         ${className}
       `}
     >

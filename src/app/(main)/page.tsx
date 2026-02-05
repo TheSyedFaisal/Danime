@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer'
 import Brand from '@/components/home-page/brand-story'
 import Features from '@/components/home-page/features-section'
 import HeroSection from '@/components/home-page/hero-section'

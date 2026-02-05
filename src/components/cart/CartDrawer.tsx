@@ -5,6 +5,7 @@ import { useCart } from "@/context/CartContext";
 import CartItem from "./CartItem";
 import { formatPrice } from "@/lib/cartUtils";
 import { IoClose } from "react-icons/io5";
+import Link from "next/link";
 
 const CartDrawer: React.FC = () => {
   const { cart, isCartOpen, closeCart, totalPrice, totalItems } = useCart();
@@ -140,16 +141,23 @@ const CartDrawer: React.FC = () => {
           )}
 
           {/* Checkout Button */}
-          <button
-            className={`w-full py-2 rounded-lg text-white text-sm md:text-base font-bold uppercase page-font tracking-widest transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] ${
+          <Link
+            href="/checkout"
+            className={`w-full py-2 rounded-lg text-white text-sm md:text-base font-bold uppercase page-font tracking-widest transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center ${
               cart.length === 0
-                ? "bg-gainsboro cursor-not-allowed"
+                ? "bg-gainsboro cursor-not-allowed pointer-events-none"
                 : "bg-foreground cursor-pointer hover:shadow-lg"
             }`}
-            disabled={cart.length === 0}
+            onClick={(e) => {
+              if (cart.length === 0) {
+                e.preventDefault();
+              } else {
+                closeCart(); // Close cart when navigating to checkout
+              }
+            }}
           >
             Check Out
-          </button>
+          </Link>
         </div>
       </div>
     </>

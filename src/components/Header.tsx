@@ -10,9 +10,9 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = "hidden"; 
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "auto";
     }
   }, [menuOpen]);
   return (
@@ -27,7 +27,7 @@ const Header = () => {
       />
 
       <nav className="absolute inset-x-0 bottom-0 z-100 flex items-end justify-center md:justify-between px-4 lg:px-8">
-        <Link href={'/'} className="flex-shrink-0 mb-4 md:mb-0 ">
+        <Link href={"/"} className="flex-shrink-0 mb-4 md:mb-0 ">
           <Image
             src="/Logo.png"
             height={40}
@@ -38,16 +38,28 @@ const Header = () => {
         </Link>
 
         <ul className="md:flex items-center gap-1 lg:gap-4 md:text-lg lg:text-xl text-white font-medium mb-1.5 lg:mb-3 hidden">
-          <Link href={'/'} className="cursor-pointer transition-all bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full">
+          <Link
+            href={"/"}
+            className="cursor-pointer transition-all bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full"
+          >
             Home
           </Link>
-          <Link href={'/customs-design'} className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all whitespace-nowrap">
+          <Link
+            href={"/customs-design"}
+            className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all whitespace-nowrap"
+          >
             Design Custom
           </Link>
-          <Link href='/collections' className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
+          <Link
+            href="/collections"
+            className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all"
+          >
             Collections
           </Link>
-          <Link href={'/about'} className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all">
+          <Link
+            href={"/about"}
+            className="cursor-pointer bg-transparent hover:bg-white hover:text-foreground px-3 lg:px-6 py-1 lg:py-2 rounded-full transition-all"
+          >
             About
           </Link>
         </ul>
@@ -67,25 +79,29 @@ const Header = () => {
         } md:hidden`}
       >
         <ul className="flex flex-col items-center gap-8 text-2xl font-semibold">
-          <Link href={'/'}
+          <Link
+            href={"/"}
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Home
-          </Link >
-          <Link href={'/customs-design'}
+          </Link>
+          <Link
+            href={"/customs-design"}
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Design Custom
           </Link>
-          <Link href='/collections'
+          <Link
+            href="/collections"
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >
             Collections
           </Link>
-          <Link href={'/about'}
+          <Link
+            href={"/about"}
             className="cursor-pointer hover:text-foreground transition"
             onClick={() => setMenuOpen(false)}
           >

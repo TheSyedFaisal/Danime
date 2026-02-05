@@ -1,8 +1,6 @@
-import ShopNowButton from "@/components/ui/Button";
 import Image from "next/image";
-import React from "react";
 
-const page = () => {
+const AboutUs = () => {
   return (
     <div className="container px-4 md:px-10 pt-10 pb-8 flex justify-between">
       <div className="">
@@ -54,4 +52,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AboutUs;

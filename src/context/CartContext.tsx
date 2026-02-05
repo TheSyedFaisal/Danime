@@ -17,7 +17,10 @@ import {
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (item: Omit<CartItem, "id" | "quantity">) => void;
+  addToCart: (
+    item: Omit<CartItem, "id" | "quantity">,
+    quantity?: number,
+  ) => void;
   removeFromCart: (itemId: string) => void;
   updateQuantity: (itemId: string, quantity: number) => void;
   clearCart: () => void;
@@ -38,6 +41,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   // Load cart from localStorage on mount
   useEffect(() => {
     const savedCart = loadCartFromStorage();
+
     setCart(savedCart);
     setIsInitialized(true);
   }, []);
@@ -49,7 +53,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [cart, isInitialized]);
 
-  const addToCart = (item: Omit<CartItem, "id" | "quantity">) => {
+  const addToCart = (
+    item: Omit<CartItem, "id" | "quantity">,
+    quantity: number = 1,
+  ) => {
     const itemId = generateCartItemId(item.productId, item.size);
 
     setCart((prevCart) => {
@@ -59,12 +66,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         // If item already exists, increase quantity
         return prevCart.map((cartItem) =>
           cartItem.id === itemId
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            ? { ...cartItem, quantity: cartItem.quantity + quantity }
             : cartItem,
         );
       } else {
         // Add new item with quantity 1
-        return [...prevCart, { ...item, id: itemId, quantity: 1 }];
+        return [...prevCart, { ...item, id: itemId, quantity: quantity }];
       }
     });
 

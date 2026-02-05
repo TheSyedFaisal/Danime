@@ -2,13 +2,23 @@
 
 import { products } from "@/lib/constant";
 import Image from "next/image";
-import React from "react";
 import { useCart } from "@/context/CartContext";
+
+interface HotSellerProduct {
+  id: number;
+  category: string;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  colors: string[];
+  sizes: string[];
+}
 
 const HotSellers = () => {
   const { addToCart } = useCart();
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: HotSellerProduct) => {
     // Use first available size as default
     const defaultSize = item.sizes[0];
 

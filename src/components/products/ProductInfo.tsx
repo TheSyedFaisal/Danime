@@ -94,15 +94,18 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
     }
 
     // Add to cart
-    addToCart({
-      productId: product.id,
-      title: product.title,
-      price: product.price,
-      discountPrice: product.discountPrice,
-      size: selectedSize,
-      image: product.images[0], // Collection card image
-      slug: product.slug,
-    });
+    addToCart(
+      {
+        productId: product.id,
+        title: product.title,
+        price: product.price,
+        discountPrice: product.discountPrice,
+        size: selectedSize,
+        image: product.images[0], // Collection card image
+        slug: product.slug,
+      },
+      qty,
+    );
 
     // Show success feedback
     setAddedToCart(true);
