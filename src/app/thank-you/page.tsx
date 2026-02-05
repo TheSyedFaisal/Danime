@@ -4,6 +4,48 @@ import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 
+// Sub-component for individual product rating
+const RatedProductItem = ({ item, index }: { item: any; index: number }) => {
+  const [rating, setRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
+
+  return (
+    <div className="flex flex-col items-center">
+      {/* Product Name */}
+      <h3 className="text-base md:text-lg uppercase page-font mb-2 md:mb-4">
+        {item.title || "Unknown Product"}
+      </h3>
+
+      {/* Star Rating per product */}
+      <div className="flex justify-center gap-2 mb-6 md:mb-8">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <button
+            key={star}
+            onClick={() => setRating(star)}
+            onMouseEnter={() => setHoverRating(star)}
+            onMouseLeave={() => setHoverRating(0)}
+            className="text-3xl md:text-4xl text-foreground hover:scale-110 transition-transform cursor-pointer"
+            aria-label={`Rate ${star} stars`}
+          >
+            {star <= (hoverRating || rating) ? "★" : "☆"}
+          </button>
+        ))}
+      </div>
+
+      {/* Product Image */}
+      <div className="relative w-65 md:w-55 lg:w-65 h-80 mx-auto mb-6">
+        <Image
+          src={item.image || "/products/collections-jeans.png"}
+          alt={item.title || "Product"}
+          fill
+          className="object-contain"
+          priority={index === 0}
+        />
+      </div>
+    </div>
+  );
+};
+
 const ThankYouContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -11,8 +53,6 @@ const ThankYouContent = () => {
 
   // State to store all ordered items
   const [orderItems, setOrderItems] = useState<any[]>([]);
-  const [rating, setRating] = useState(0);
-  const [hoverRating, setHoverRating] = useState(0);
 
   useEffect(() => {
     // Get all items from the last order in localStorage
@@ -53,44 +93,13 @@ const ThankYouContent = () => {
           </p>
 
           {/* Ordered Items List */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-8">
             {orderItems.map((item, index) => (
-              <div
+              <RatedProductItem
                 key={item.id || index}
-                className="flex flex-col items-center"
-              >
-                {/* Product Name */}
-                <h3 className="text-base md:text-lg uppercase page-font mb-2 md:mb-4">
-                  {item.title || "Unknown Product"}
-                </h3>
-
-                {/* Star Rating per product (visual only for now as requested generally) */}
-                <div className="flex justify-center gap-2 mb-6 md:mb-8">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <button
-                      key={star}
-                      onClick={() => setRating(star)}
-                      onMouseEnter={() => setHoverRating(star)}
-                      onMouseLeave={() => setHoverRating(0)}
-                      className="text-3xl md:text-4xl text-foreground hover:scale-110 transition-transform cursor-pointer"
-                      aria-label={`Rate ${star} stars`}
-                    >
-                      {star <= (hoverRating || rating) ? "★" : "☆"}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Product Image */}
-                <div className="relative w-65 md:w-55  lg:w-65 h-80 mx-auto mb-6">
-                  <Image
-                    src={item.image || "/products/collections-jeans.png"}
-                    alt={item.title || "Product"}
-                    fill
-                    className="object-contain"
-                    priority={index === 0}
-                  />
-                </div>
-              </div>
+                item={item}
+                index={index}
+              />
             ))}
           </div>
 
@@ -101,7 +110,7 @@ const ThankYouContent = () => {
           )}
 
           {/* Footer Text */}
-          <p className="text-sm gilmor-regular font-bold mb-4">
+          <p className="text-sm md:text-lg gilmor-regular font-bold mb-4">
             The Danime Team
           </p>
 

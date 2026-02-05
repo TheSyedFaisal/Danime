@@ -262,13 +262,13 @@ const CheckoutPage = () => {
             </h2>
 
             {/* Cart Items */}
-            <div className="space-y-4 mb-6 max-h-[400px] overflow-y-auto">
+            <div className="space-y-4 mb-6 max-h-[400px] overflow-y-auto hidden-scrollbar md:h-40">
               {cart.map((item) => {
                 const itemPrice = item.discountPrice ?? item.price;
                 return (
                   <div
                     key={item.id}
-                    className="flex gap-3 pb-4 border-b border-gray-200"
+                    className="flex gap-3 pb-4 border-b border-foreground"
                   >
                     <div className="relative w-16 h-20 flex-shrink-0 bg-gray-100 rounded overflow-hidden">
                       <Image
