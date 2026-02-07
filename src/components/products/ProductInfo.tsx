@@ -96,7 +96,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
     // Add to cart
     addToCart(
       {
-        productId: product.id,
+        productId: product.documentId || product.id,
         title: product.title,
         price: product.price,
         discountPrice: product.discountPrice,

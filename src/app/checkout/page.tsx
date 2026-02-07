@@ -275,6 +275,7 @@ const CheckoutPage = () => {
                         src={item.image}
                         alt={item.title}
                         fill
+                        unoptimized={true}
                         className="object-contain"
                       />
                     </div>

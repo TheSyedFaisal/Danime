@@ -1,5 +1,8 @@
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export interface Product {
   id: number;
+  documentId?: string;
   title: string;
   price: number;
   discountPrice?: number;
@@ -13,12 +16,13 @@ export interface Product {
 }
 
 export interface CartItem {
-  id: string; // unique identifier (productId-size)
-  productId: number;
+  id: string; // unique identifier (productId-size-color)
+  productId: number | string;
   title: string;
   price: number;
   discountPrice?: number;
   size: string;
+  color?: string;
   quantity: number;
   image: string;
   slug: string;

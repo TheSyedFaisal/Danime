@@ -8,8 +8,12 @@ export const calculateItemTotal = (price: number, quantity: number): number => {
   return price * quantity;
 };
 
-export const generateCartItemId = (productId: number, size: string): string => {
-  return `${productId}-${size}`;
+export const generateCartItemId = (
+  productId: number | string,
+  size: string,
+  color?: string,
+): string => {
+  return color ? `${productId}-${size}-${color}` : `${productId}-${size}`;
 };
 
 const CART_STORAGE_KEY = "danime_shopping_cart";

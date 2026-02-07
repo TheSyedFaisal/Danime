@@ -57,7 +57,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     item: Omit<CartItem, "id" | "quantity">,
     quantity: number = 1,
   ) => {
-    const itemId = generateCartItemId(item.productId, item.size);
+    const itemId = generateCartItemId(item.productId, item.size, item.color);
 
     setCart((prevCart) => {
       const existingItem = prevCart.find((cartItem) => cartItem.id === itemId);
