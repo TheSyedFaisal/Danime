@@ -40,6 +40,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
           alt={item.title}
           fill
           className="object-contain"
+          unoptimized={true}
         />
       </div>
 
@@ -54,6 +55,15 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
             <p className="text-xs text-gray-600 mt-1 gilmor-regular">
               Size: {item.size}
             </p>
+            {item.color && (
+              <p className="text-xs text-gray-600 mt-1 flex items-center gap-1.5 gilmor-regular">
+                Color:{" "}
+                <span
+                  className="inline-block w-3 h-3 rounded-full border border-gray-300"
+                  style={{ backgroundColor: item.color }}
+                ></span>
+              </p>
+            )}
           </div>
 
           <button
@@ -94,9 +104,9 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
               {formatPrice(itemTotal)}
             </p>
 
-              <p className="text-xs text-gray-500 gilmor-regular">
-                {item.quantity}x {formatPrice(displayPrice)}
-              </p>
+            <p className="text-xs text-gray-500 gilmor-regular">
+              {item.quantity}x {formatPrice(displayPrice)}
+            </p>
           </div>
         </div>
       </div>

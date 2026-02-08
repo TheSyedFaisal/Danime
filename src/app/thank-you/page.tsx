@@ -40,6 +40,7 @@ const RatedProductItem = ({ item, index }: { item: any; index: number }) => {
           fill
           className="object-contain"
           priority={index === 0}
+          unoptimized={true}
         />
       </div>
     </div>

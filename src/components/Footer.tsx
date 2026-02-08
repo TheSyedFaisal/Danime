@@ -30,10 +30,11 @@ const Footer = () => {
           ))}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="bg-transparent border border-foreground text-foreground rounded-full 
-            md:p-1 hover:border-background cursor-pointer"
+            className="bg-transparent p-0.5 md:p-2 md:p-1 cursor-pointer transition-all duration-300 ease-out
+            relative overflow-hidden rounded-full border-2 border-foreground text-foreground hover:bg-white/60
+            hover:backdrop-blur-md hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:scale-105 text-xs sm:text-xl md:text-[30px]"
           >
-            <IoIosArrowRoundUp color="foreground" size={35} />
+            <IoIosArrowRoundUp />
           </button>
         </div>
 

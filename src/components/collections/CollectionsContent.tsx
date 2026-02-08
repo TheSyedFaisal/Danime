@@ -6,14 +6,13 @@ import { HeartIcon } from "../ui/Icons";
 interface CollectionsContentProps {
   products: Product[];
   activeIndex: number;
-  title: string
+  title: string;
 }
 
 const CollectionsContent: React.FC<CollectionsContentProps> = ({
   products,
   activeIndex,
-  title
-
+  title,
 }) => {
   const product = products[activeIndex];
 
@@ -31,7 +30,7 @@ const CollectionsContent: React.FC<CollectionsContentProps> = ({
         <p className="text-foreground mb-0.5 gilmor-regular">Best Sellers</p>
       )}
       <h3 className="text-2xl page-font text-black mb-4">{product?.price}</h3>
-      <p className="text-black md:text-xs md:leading-4 lg:text-base  gilmor-regular leading-5.5 lg:leading-5.5">
+      <p className="text-black md:text-xs md:leading-4 lg:text-base gilmor-regular leading-5.5 lg:leading-5.5 md:max-w-[320px] mx-auto md:mx-0 break-words">
         {product?.description}
       </p>
     </div>
