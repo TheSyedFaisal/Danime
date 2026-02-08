@@ -27,7 +27,7 @@ const RatedProductItem = ({ item, index }: { item: any; index: number }) => {
             className="text-3xl md:text-4xl text-foreground hover:scale-110 transition-transform cursor-pointer"
             aria-label={`Rate ${star} stars`}
           >
-          {star <= (hoverRating || rating) ? "★" : "☆"}
+            {star <= (hoverRating || rating) ? "★" : "☆"}
           </button>
         ))}
       </div>
@@ -100,7 +100,6 @@ const ThankYouContent = () => {
                 key={item.id || index}
                 item={item}
                 index={index}
-                
               />
             ))}
           </div>

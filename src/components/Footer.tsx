@@ -34,7 +34,7 @@ const Footer = () => {
             relative overflow-hidden rounded-full border-2 border-foreground text-foreground hover:bg-white/60
             hover:backdrop-blur-md hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:scale-105 text-xs sm:text-xl md:text-[30px]"
           >
-            <IoIosArrowRoundUp  />
+            <IoIosArrowRoundUp />
           </button>
         </div>
 

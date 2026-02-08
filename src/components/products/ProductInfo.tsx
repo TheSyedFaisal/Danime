@@ -91,7 +91,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   const discountPercent =
     hasDiscount && productPrice > 0
       ? Math.round(
-          ((productPrice - productDiscountPrice!) / productPrice) * 100,
+          ((productPrice - productDiscountPrice!) / productPrice) * 100
         )
       : 0;
 
@@ -125,7 +125,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         image: itemImage || "", // Product image
         slug: product.slug,
       },
-      qty,
+      qty
     );
 
     // Show success feedback

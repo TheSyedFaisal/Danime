@@ -37,7 +37,7 @@ const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
                 "aspect-[124/124] bg-white ",
                 i === activeImg && !showVideo
                   ? "border-2 border-foreground"
-                  : "border border-transparent",
+                  : "border border-transparent"
               )}
             >
               <Image
@@ -59,9 +59,7 @@ const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
             className={cn(
               "relative aspect-[124/124] w-full rounded-2xl flex items-center justify-center border-2 transition overflow-hidden group/vid",
               videoUrl ? "cursor-pointer" : "opacity-50 cursor-not-allowed",
-              showVideo && videoUrl
-                ? "border-foreground"
-                : "border-transparent",
+              showVideo && videoUrl ? "border-foreground" : "border-transparent"
             )}
             style={!videoUrl ? { pointerEvents: "none" } : {}}
           >
@@ -79,7 +77,7 @@ const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
               <Play
                 className={cn(
                   "w-4 h-4 lg:w-5 lg:h-5",
-                  showVideo ? "text-foreground fill-foreground" : "text-white",
+                  showVideo ? "text-foreground fill-foreground" : "text-white"
                 )}
               />
             </div>

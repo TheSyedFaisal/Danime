@@ -11,7 +11,7 @@ export const calculateItemTotal = (price: number, quantity: number): number => {
 export const generateCartItemId = (
   productId: number | string,
   size: string,
-  color?: string,
+  color?: string
 ): string => {
   return color ? `${productId}-${size}-${color}` : `${productId}-${size}`;
 };

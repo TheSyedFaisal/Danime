@@ -66,7 +66,7 @@ const RightCollectionsCard = () => {
 
   return (
     <div className="grid grid-cols-2 gap-3 md:gap-6 h-full">
-      {products?.slice(0,4).map((item: Card) => {
+      {products?.slice(0, 4).map((item: Card) => {
         const imageUrl =
           typeof item.image === "string"
             ? item.image

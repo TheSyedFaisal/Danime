@@ -63,7 +63,8 @@ const CustomDesignSection = () => {
                   <SelectContent>
                     <SelectItem value="japan">
                       <span className="flex items-center gap-2">
-                        <span className="text-foreground header-font">•</span> Japan
+                        <span className="text-foreground header-font">•</span>{" "}
+                        Japan
                       </span>
                     </SelectItem>
                     <SelectItem value="usa">USA</SelectItem>

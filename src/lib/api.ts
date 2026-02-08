@@ -55,7 +55,7 @@ export const getCollectionBySlug = async (slug: string) => {
       const errorText = await resp.text();
       console.error(
         `API response error: ${resp.status} ${resp.statusText}`,
-        errorText,
+        errorText
       );
       return null;
     }
@@ -66,7 +66,7 @@ export const getCollectionBySlug = async (slug: string) => {
   } catch (error) {
     console.error(
       `There was an error getting collection for slug ${slug}`,
-      error,
+      error
     );
     return null;
   }

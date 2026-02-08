@@ -28,8 +28,7 @@ const ProductDetailPage = () => {
 
           if (collectionData && collectionData.products) {
             const foundProduct = collectionData.products.find(
-              (p: Product) =>
-                p.slug.toLowerCase() === productSlug.toLowerCase(),
+              (p: Product) => p.slug.toLowerCase() === productSlug.toLowerCase()
             );
 
             if (foundProduct) {

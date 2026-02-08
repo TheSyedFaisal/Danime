@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const LeftCollectionCards = () => {
   return (
-    <Link href={'/customs-design'} className="flex flex-col ">
+    <Link href={"/customs-design"} className="flex flex-col ">
       <div className="flex flex-col min-h-[221px] sm:min-h-[350px] lg:min-h-[636px] rounded-2xl overflow-hidden bg-white relative">
         <Image
           src="/card-1-img-1.jpg"

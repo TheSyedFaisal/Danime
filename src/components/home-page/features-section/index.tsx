@@ -3,7 +3,6 @@ import Image from "next/image";
 const Features = () => {
   return (
     <section className="relative bg-white overflow-hidden h-[320px] sm:h-[400px] md:h-[550px] lg:h-[700px] container">
-      
       {/* Top bold FEATURED */}
       <h1 className="page-font text-[13.1vw] sm:text-[12.7vw] xl:text-[165px] leading-none lg:leading-33 text-black -ml-[11px]">
         FEATURED
@@ -23,7 +22,6 @@ const Features = () => {
 
       {/* Center content */}
       <div className="absolute inset-0 flex items-center justify-center z-10 ">
-        
         {/* Vectors */}
         <div className="absolute sm:flex gap-32 z-0 hidden">
           <Image

@@ -19,7 +19,7 @@ const Page = () => {
         setLoading(true);
         const data = await getCollectionBySlug(slug);
         setCollection(data);
-        console.log("collections", collection)
+        console.log("collections", collection);
         setLoading(false);
       }
     };

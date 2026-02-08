@@ -161,7 +161,7 @@ const CollectionImageSliders: React.FC<CollectionImageSlidersProps> = ({
         ? "aspect-[598/603]"
         : slug === "doll"
           ? "aspect-[394/629]"
-        : "aspect-[372/643]";
+          : "aspect-[372/643]";
   const shadowBottom = slug === "jeans" ? "-1.75rem" : "-3.75rem";
 
   return (
