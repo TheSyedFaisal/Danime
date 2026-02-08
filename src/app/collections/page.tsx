@@ -1,12 +1,13 @@
 import LeftCollectionCards from "@/components/LeftCollectionCards";
 import RightCollectionsCard from "@/components/RightCollectionsCard";
+import { getProducts } from "@/lib/api";
 import Image from "next/image";
 
 const CardSection = () => {
   return (
     <section className="px-4 md:px-6 container pb-6">
       <div
-        className=" mt-6 rounded lg:rounded-2xl relative overflow-hidden px-6 "
+        className=" mt-6 rounded lg:rounded-2xl relative overflow-hidden px-[14px] md:px-6 "
         style={{
           backgroundImage: "url('/Group-20.png')",
           backgroundSize: "cover",

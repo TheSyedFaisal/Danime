@@ -23,7 +23,7 @@ interface HotSellerProduct {
   productSize: Size[];
 }
 
-interface Size {
+export interface Size {
   id: number;
   size: string;
 }
@@ -54,7 +54,7 @@ const HotSellerCard = ({ item }: { item: HotSellerProduct }) => {
     addToCart({
       productId: item.documentId,
       title: item.name,
-      price: parseInt(item.price.replace(/[^0-9]/g, "")) * 100, 
+      price: parseInt(item.price.replace(/[^0-9]/g, "")) * 100,
       size: sizeToUse,
       color: selectedColor?.color,
       image: imageUrl,
@@ -171,17 +171,28 @@ const HotSellerCard = ({ item }: { item: HotSellerProduct }) => {
 
 const HotSellers = () => {
   const [products, setproducts] = useState<HotSellerProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const data = await getHotSellersProducts();
-      if (Array.isArray(data)) {
-        setproducts(data);
-      } else if (data && Array.isArray(data.data)) {
-        setproducts(data.data);
-      } else {
-        console.error("Invalid data format received:", data);
+      setLoading(true);
+      setError(null);
+      try {
+        const productsList = await getHotSellersProducts();
+        if (productsList && productsList.length > 0) {
+          setproducts(productsList);
+        } else {
+          console.error("No hot seller products found");
+          setproducts([]);
+          setError("Hot seller products failed to fetch");
+        }
+      } catch (error) {
+        console.error("Error fetching hot sellers products:", error);
         setproducts([]);
+        setError("Hot seller products failed to fetch");
+      } finally {
+        setLoading(false);
       }
     };
     fetchProducts();
@@ -189,17 +200,40 @@ const HotSellers = () => {
 
   return (
     <div className="pt-5 pb-5 md:pt-12 md:pb-12 container">
-      <h2 className="text-center page-font text-2xl md:text-3xl lg:text-4xl">
+      <h2 className="text-center page-font text-2xl md:text-3xl lg:text-4xl uppercase">
         HOT SELLERS
       </h2>
 
-      <div
-        className="grid grid-cols-3 gap-y-12 gap-x-4 sm:gap-x-8 place-items-center
-        mt-10 px-2 md:px-8"
-      >
-        {products.map((item) => (
-          <HotSellerCard key={item.documentId} item={item} />
-        ))}
+      <div className="mt-10 px-2 md:px-8">
+        {loading ? (
+          <div className="flex flex-col items-center justify-center min-h-[100px] gap-4">
+            <div className="relative w-12 h-12">
+              <div className="absolute top-0 left-0 w-full h-full border-2 border-foreground/10 rounded-full"></div>
+              <div className="absolute top-0 left-0 w-full h-full border-2 border-foreground border-t-transparent rounded-full animate-spin"></div>
+            </div>
+            <p className="text-foreground/60 animate-pulse gilmer-medium tracking-[0.2em] text-[10px] md:text-xs">
+              LOADING PRODUCTS...
+            </p>
+          </div>
+        ) : error ? (
+          <div className="flex flex-col items-center justify-center min-h-[100px] gap-4">
+            <p className="text-[#F54F5F] gilmer-heavy tracking-widest text-xs md:text-sm text-center px-4">
+              {error.toUpperCase()}
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="mt-2 px-8 py-2 border border-foreground text-foreground gilmer-heavy text-[10px] tracking-widest hover:bg-foreground hover:text-background transition-all duration-300 rounded-full cursor-pointer"
+            >
+              TRY AGAIN
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-3 gap-y-12 gap-x-4 sm:gap-x-8 place-items-center">
+            {products.map((item) => (
+              <HotSellerCard key={item.documentId || item.id} item={item} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

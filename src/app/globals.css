@@ -126,3 +126,25 @@ body {
 .hidden-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+
+@media (min-width: 1px) and (max-width: 440px) {
+
+  .product-height {
+    height: 200px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 470px) {
+
+  .product-height {
+    height: 300px;
+  }
+}
+
+@media (min-width: 470px) and (max-width: 640px) {
+
+  .product-height {
+    height: 400px;
+  }
+}

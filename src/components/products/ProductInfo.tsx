@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Product } from "@/lib/constant";
+import { Product, BASE_URL } from "@/lib/constant";
 import { useCart } from "@/context/CartContext";
 
 interface ProductInfoProps {
@@ -76,32 +76,53 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
 
   const { addToCart } = useCart();
 
-  const hasDiscount = !!product.discountPrice;
-  const discountPercent = hasDiscount
-    ? Math.round(
-        ((product.price - product.discountPrice!) / product.price) * 100,
-      )
-    : 0;
+  const parsePrice = (price: string | number): number => {
+    if (typeof price === "number") return price;
+    const numeric = parseFloat(price.replace(/[^0-9.-]/g, "")) || 0;
+    return Math.round(numeric * 100);
+  };
 
-  const formatPrice = (val: number) => `$${(val / 100).toFixed(2)}`;
+  const productPrice = parsePrice(product.price);
+  const productDiscountPrice = product.discountPrice
+    ? parsePrice(product.discountPrice)
+    : undefined;
+
+  const hasDiscount = !!productDiscountPrice;
+  const discountPercent =
+    hasDiscount && productPrice > 0
+      ? Math.round(
+          ((productPrice - productDiscountPrice!) / productPrice) * 100,
+        )
+      : 0;
+
+  const formatPrice = (val: number | string) => {
+    if (typeof val === "string" && val.startsWith("$")) return val;
+    const num = typeof val === "number" ? val : parsePrice(val);
+    return `$${(num / 100).toFixed(2)}`;
+  };
 
   const handleAddToCart = () => {
     // Validate size selection
-    if (!selectedSize) {
+    if (!selectedSize && product.sizes && product.sizes.length > 0) {
       setSizeError(true);
       setTimeout(() => setSizeError(false), 2000);
       return;
     }
+
+    const itemImage =
+      typeof product.images === "string"
+        ? product.images
+        : `${BASE_URL}${product.images?.url}`;
 
     // Add to cart
     addToCart(
       {
         productId: product.documentId || product.id,
         title: product.title,
-        price: product.price,
-        discountPrice: product.discountPrice,
-        size: selectedSize,
-        image: product.images[0], // Collection card image
+        price: productPrice,
+        discountPrice: productDiscountPrice,
+        size: selectedSize || "",
+        image: itemImage || "", // Product image
         slug: product.slug,
       },
       qty,
@@ -113,7 +134,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   };
 
   return (
-    <div>
+    <div className="mt-6">
       {/* Best Seller Badge */}
       <div className="mb-4 md:mb-7 hidden md:block">
         {product.bestSeller && (
@@ -160,16 +181,16 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
           )}
         </p>
         <div className="flex gap-3 flex-wrap">
-          {product.sizes.map((size) => (
+          {product.productSize?.map((size) => (
             <button
-              key={size}
+              key={size.id}
               onClick={() => {
-                setSelectedSize(size);
+                setSelectedSize(size.size);
                 setSizeError(false);
               }}
-              className={`gilmor-regular text-[11px] md:text-base transition-all duration-200 text-[13px] font-medium cursor-pointer ${selectedSize === size ? "text-foreground border-b" : "text-black"} ${sizeError ? "text-red-500" : ""}`}
+              className={`gilmor-regular text-[11px] md:text-base transition-all duration-200 text-[13px] font-medium cursor-pointer ${selectedSize === size.size ? "text-foreground border-b" : "text-black"} ${sizeError ? "text-red-500" : ""}`}
             >
-              {size}
+              {size.size}
             </button>
           ))}
         </div>

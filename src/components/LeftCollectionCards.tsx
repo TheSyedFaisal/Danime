@@ -6,7 +6,7 @@ import Link from "next/link";
 const LeftCollectionCards = () => {
   return (
     <Link href={'/customs-design'} className="flex flex-col ">
-      <div className="flex flex-col min-h-[350px] lg:min-h-[636px] rounded-2xl overflow-hidden bg-white relative">
+      <div className="flex flex-col min-h-[221px] sm:min-h-[350px] lg:min-h-[636px] rounded-2xl overflow-hidden bg-white relative">
         <Image
           src="/card-1-img-1.jpg"
           alt=""
@@ -17,13 +17,13 @@ const LeftCollectionCards = () => {
 
         <div className="relative group w-full h-full">
           {/* Card 1 image - top rotated */}
-          <div className="group-hover:scale-110 transition-transform duration-2000 ease-in-out">
+          <div className=" transition-transform duration-2000 ease-in-out">
             <Image
               src="/card-1-img-2.png"
               alt=""
               width={240}
               height={240}
-              className="absolute top-6 md:w-[300px] md:h-[300px] lg:w-[240px] lg:h-[240px] right-0 lg:right-16 rotate-12 z-10
+              className="absolute w-[200px] -top-10 sm:top-6 md:w-[300px] md:h-[300px] lg:w-[240px] lg:h-[240px] -right-7 lg:right-16 rotate-12 z-10
                   transition-transform duration-2000 ease-in-out 
                   lg:group-hover:translate-x-30 "
             />
@@ -63,7 +63,7 @@ const LeftCollectionCards = () => {
           </div>
         </div>
 
-        <div className="absolute z-20 w-[350px] h-[500px] h-[500px] md:w-[700px] md:h-[670px] -bottom-30 md:-bottom-50 -left-30 lg:hidden">
+        <div className="absolute z-20 w-[350px] h-[500px] sm:w-[600px] sm:h-[670px] -bottom-35 md:-bottom-50 -left-15 lg:hidden">
           <Image
             src="/card-1-img-3.png"
             alt=""
