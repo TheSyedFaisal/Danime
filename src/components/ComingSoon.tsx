@@ -9,7 +9,6 @@ export default function ComingSoonPage() {
         alt="Background"
         fill
         priority
-        unoptimized // Ye Vercel ki compression ko bypass kar dega
         quality={100}
         className="object-cover"
       />
